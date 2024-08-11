@@ -1,0 +1,128 @@
+/* Reset some default styling */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the body font and background */
+body {
+    font-family: "Luckiest Guy", cursive;
+    background-color: #ffd1dc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #ffd1dc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 5rem;
+    color: #d6406d;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a8325d;
+}
+
+/* Main Image Section */
+.main-image {
+    text-align: center;
+}
+
+.main-image img {
+    height: auto;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Main content area */
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: auto;
+}
+
+/* Meme card styling */
+.meme-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.meme-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(50% - 0.75rem); /* Adjust width to ensure two cards per row with the gap */
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    max-height: 400px;
+}
+
+.meme-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    flex-grow: 1; /* Allow the image to grow and fill available space */
+}
+
+.meme-card p {
+    padding: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #d6406d;
+}
+
+/* Add a hover effect */
+.meme-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer styling */
+footer {
+    background-color: #ffd1dc;
+    text-align: center;
+    padding: 1rem;
+    color: #a8325d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .meme-card {
+        width: 100%; /* Stack meme cards vertically on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .meme-card p {
+        font-size: 1rem;
+    }
+}
